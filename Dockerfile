@@ -20,7 +20,7 @@ RUN pip --no-cache-dir install flask
 RUN pip --no-cache-dir install https://pypi.python.org/packages/source/M/M2Crypto/M2Crypto-0.24.0.tar.gz
 RUN pip install /tmp/python-firetv-master[firetv-server]
 
-CMD ["firetv-server", "-c", "config/devices.yaml"]
+CMD ["firetv-server", "-c", "/config/devices.yaml"]
 
 # docker build -t docker-firetv .
 # docker run -it --rm --name docker-firetv -p 5556:5556 docker-firetv
